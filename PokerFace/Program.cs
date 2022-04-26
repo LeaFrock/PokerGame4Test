@@ -14,7 +14,7 @@ while (!game.IsOver)
     Console.WriteLine($"Player{currentPlayer} Round, input please...");
     while (true)
     {
-        input = Console.ReadLine();
+        input = Console.ReadLine();//格式为“<Row> <PickCount>”，例如第1行取走2个元素，则在控制台输入“1 2”
         if (!ValidateInputFormat(input, out row, out pickCount))
         {
             Console.WriteLine("Invalid Input. Format: \"<Row> <PickCount>\"");
