@@ -40,15 +40,10 @@
             {
                 return;
             }
-            if (LeftCount == 1)
-            {
-                Console.WriteLine($"Player{NextPlayer()} lose.");
-            }
-            else if (LeftCount == 0)
-            {
-                Console.WriteLine($"Player{_currentRound.Player} lose.");
-            }
-            Console.WriteLine("Game Over!");
+            int losePlayer = LeftCount == 1 
+                ? NextPlayer() 
+                : _currentRound.Player;
+            Console.WriteLine($"Player{losePlayer} lose. Game Over!");
         }
 
         public int NextPlayer()
